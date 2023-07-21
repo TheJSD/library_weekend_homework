@@ -1,5 +1,6 @@
 {% extends 'base.jinja' %}
 {% block content %}
+    <h1>{{ title }}</h1>
     <div>
         {% for book in books %}
         <p><a href="/library/{{loop.index}}">{{ book.title }}</a>

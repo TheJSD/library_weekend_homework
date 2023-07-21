@@ -5,3 +5,6 @@ book2 = Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", "Science-F
 book3 = Book("The Art of War", "Sun Tzu", "Treatise")
 
 books = [book1, book2, book3]
+
+def add_book(book):
+    books.append(book)
