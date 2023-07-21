@@ -2,7 +2,7 @@
 {% block content %}
     <h1>{{ title }}</h1>
     <h2>Please fill in the form below to add a book to our collection:</h2>
-    <form action="/library/add_a_book", method="post">
+    <form action="/library", method="post">
     <label for="title">Book Title: </label>
     <input type="text", name="title", id="title">
     <label for="author">Author: </label>

@@ -17,7 +17,7 @@ def book(index):
 def add_a_book_site():
     return render_template("/add_a_book.jinja", title="Add a Book")
 
-@books_blueprint.route("/library/add_a_book", methods=["post"])
+@books_blueprint.route("/library", methods=["post"])
 def add_a_book():
     new_book = Book(request.form["title"], request.form["author"], request.form["genre"])
     add_book(new_book)
