@@ -2,7 +2,7 @@
 {% block content %}
     <div>
         {% for book in books %}
-        <p>{{ book.title }}
+        <p><a href="/library/{{loop.index}}">{{ book.title }}</a>
             <ul>
                 <li>Author: {{ book.author }}</li>
                 <li>Genre: {{ book.genre }}</li>
