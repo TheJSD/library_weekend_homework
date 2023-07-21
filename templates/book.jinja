@@ -5,4 +5,9 @@
     <li>{{book.author}}</li>
     <li>{{book.genre}}</li>
     </ul>
+<form type="library/{{ book_index }}/delete", method="post">
+<label for="delete_book"></label>
+<input type="submit", value="Remove Book", name="delete_book" id="book_index">
+</form>
+
 {% endblock content %}

@@ -8,3 +8,6 @@ books = [book1, book2, book3]
 
 def add_book(book):
     books.append(book)
+
+def remove_book(book_index):
+    del books[book_index]
