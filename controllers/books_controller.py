@@ -25,6 +25,6 @@ def add_a_book():
     return render_template("index.jinja", title="Library Catalog", books=books)
 
 @books_blueprint.route("/library/<index>/delete", methods=["post"])
-def remove_book_from_library(book):
-    remove_book(int(book))
+def remove_book_from_library(index):
+    remove_book((int(index) - 1))
     return render_template("index.jinja", title="Library Catalog", books=books)

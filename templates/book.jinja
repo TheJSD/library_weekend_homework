@@ -2,10 +2,10 @@
 {% block content %}
     <h2>{{book.title}}</h2>
     <ul>
-    <li>{{book.author}}</li>
-    <li>{{book.genre}}</li>
+    <li>Author: {{book.author}}</li>
+    <li>Genre: {{book.genre}}</li>
     </ul>
-<form type="library/{{ book_index }}/delete", method="post">
+<form action="/library/{{ book_index }}/delete", method="post">
 <label for="delete_book"></label>
 <input type="submit", value="Remove Book", name="delete_book" id="book_index">
 </form>
