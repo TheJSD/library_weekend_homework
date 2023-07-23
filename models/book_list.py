@@ -7,14 +7,16 @@ book3 = Book("The Art of War", "Sun Tzu", "Treatise")
 
 books = [book1, book2, book3]
 
-def add_book(book):
-    books.append(book)
+class BookMethods:
 
-def remove_book(book_index):
-    del books[book_index]
+    def add_book(book):
+        books.append(book)
 
-def check_in_book(book_index):
-    books[book_index].checked_out = False
+    def remove_book(book_index):
+        del books[book_index]
 
-def check_out_book(book_index):
-    books[book_index].checked_out = True
+    def check_in_book(book_index):
+        books[book_index].checked_out = False
+
+    def check_out_book(book_index):
+        books[book_index].checked_out = True
