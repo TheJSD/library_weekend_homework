@@ -1,20 +1,41 @@
 {% extends 'base.jinja' %}
 {% block content %}
-    <h2>{{book.title}}</h2>
-    <ul>
-    <li>Author: {{book.author}}</li>
-    <li>Genre: {{book.genre}}</li>
-    <li>Status:
-    {% if book.checked_out == False %}
-        Checked in ✅
-    {% else %}
-        Checked out ❌
-    {% endif %}
-    </li>
-    </ul>
-<form action="/library/{{ book_index }}/delete", method="post">
-<label for="delete_book"></label>
-<input type="submit", value="Delete Book", name="delete_book" id="book_index">
-</form>
+    <div class="align_container title">
+        <div class="container">
+            <h2 class="book_title">{{book.title}}</h2>
+        </div></div>
+    <div class="align_container">
+        <div class="container book">
+            <ul class="book_list">
+            <li>Author: {{book.author}}</li>
+            <li>Genre: {{book.genre}}</li>
+            <li>Status:
+            {% if book.checked_out == False %}
+                Checked In!
+            {% else %}
+                Checked Out!
+            {% endif %}
+            </li>
+            {% if book.checked_out == True %}
+                            <li><form action="/library/{{ book_index }}/check_out_toggle", method="post">
+            <label for="check_out">Check book out: </label>
+            <input type="checkbox", id="check_out", name="check_out", value="Check out", checked>
+            <label for="update_book"></label>
+            <input type="submit", value="Update Book", name="update_book", id="update_book">
+            </form></li>
+            {% else %}
+                <li><form action="/library/{{ book_index }}/check_out_toggle", method="post">
+            <label for="check_out">Check book out: </label>
+            <input type="checkbox", id="check_out", name="check_out", value="Check out">
+            <label for="update_book"></label>
+            <input type="submit", value="Update Book", name="update_book", id="update_book">
+            </form></li>
+            {% endif %}
+            </ul>
+            <form action="/library/{{ book_index }}/delete", method="post">
+            <label for="delete_book"></label>
+            <input type="submit", value="Delete Book", name="delete_book" id="book_index">
+        </form>
+    </div></div>
 
 {% endblock content %}

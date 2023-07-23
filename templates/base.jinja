@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{{ title }}</title>
 </head>
 <body>
-    <nav>
-        <a href="/library">Library</a>
-        <a href="/library/add_a_book">Add a Book</a>
+    <nav class="align_container navbar">
+        <div class="container">
+            <a class="navbar__link" href="/library">Library</a>
+            <a class="navbar__link" href="/library/add_a_book">Add a Book</a>
+        </div>
     </nav>
     {% block content %}
         

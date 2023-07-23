@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Global */
+
+.align_container {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.title {
+    height: 2.6rem;
+    justify-content: center;
+}
+
+.book_list {
+    list-style: none;
+}
+
+
+
+/* base specific */
+
+.navbar {
+    height: 3rem;
+    background-color: dodgerblue;
+}
+
+.navbar > .container {
+    gap: 4px;
+}
+.navbar > .container > a {
+    background-color: rgb(0, 73, 125);
+    border-radius: 15px;
+    padding: 0.6rem;
+    color: rgb(155, 205, 255)
+}
+
+
+
+/* index specific */
+
+
+/* book specific */
+
+.book_title {
+    
+}

@@ -1,10 +1,14 @@
 {% extends 'base.jinja' %}
 {% block content %}
-    <h1>{{ title }}</h1>
-    <div>
+    <div class="align_container title">
+        <div class="container">
+        <h1>{{ title }}</h1>
+    </div></div>
+    <div class="align_container">
+        <div class="container">
         {% for book in books %}
         <p><a href="/library/{{loop.index}}">{{ book.title }}</a>
-            <ul>
+            <ul class="book_list">
                 <li>Author: {{ book.author }}</li>
                 <li>Genre: {{ book.genre }}</li>
                 <li>Status:
@@ -17,5 +21,6 @@
             </ul>
         </p>
     {% endfor %}
+        </div>
     </div>
 {% endblock content %}
