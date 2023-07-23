@@ -9,14 +9,14 @@ books = [book1, book2, book3]
 
 class BookMethods:
 
-    def add_book(book):
-        books.append(book)
+    def add_book(books_list, book):
+        books_list.append(book)
 
-    def remove_book(book_index):
-        del books[book_index]
+    def remove_book(books_list, book_index):
+        del books_list[book_index]
 
-    def check_in_book(book_index):
-        books[book_index].checked_out = False
+    def check_in_book(books_list, book_index):
+        books_list[book_index].checked_out = False
 
-    def check_out_book(book_index):
-        books[book_index].checked_out = True
+    def check_out_book(books_list, book_index):
+        books_list[book_index].checked_out = True
